@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:55:34 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/03 16:24:56 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/06 12:20:11 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalpha(c) && ft_isdigit(c));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
