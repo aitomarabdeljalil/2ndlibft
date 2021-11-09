@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 10:10:23 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/06 10:33:09 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/09 11:49:06 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 		sign = -1;
 		str++;
 	}
-	if (*str == '+')
+	else if (*str == '+')
 		str++;
 	while (ft_isdigit(*str))
 		result = result * 10 + (*(str++) - 48) * sign;
