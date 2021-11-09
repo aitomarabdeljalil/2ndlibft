@@ -28,7 +28,8 @@ ft_substr.c\
 ft_strjoin.c\
 ft_strtrim.c\
 ft_split.c\
-ft_strmapi.c
+ft_strmapi.c\
+ft_striteri.c
 OBJS	:= $(patsubst %.c, %.o, $(SRCS))
 
 .PHONY: all clean fclean re
