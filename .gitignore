@@ -4,3 +4,4 @@ libftTester
 *.swp
 *.a
 .DS_Store
+*.dSYM
