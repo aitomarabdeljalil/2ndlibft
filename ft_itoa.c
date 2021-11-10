@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 18:06:32 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/09 21:09:55 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/10 17:07:53 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 
 // doesn't work for INT_MIN
-int	ft_abs(int n)
+static int	ft_abs(int n)
 {
 	if (n >= 0)
 		return (n);
