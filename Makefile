@@ -58,10 +58,7 @@ fclean: clean
 
 re: fclean all
 
-$(OBJS): %.o: %.c libft.h
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-$(BONUS_OBJS): %.o: %.c libft.h
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME): $(OBJS)
