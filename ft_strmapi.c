@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 14:13:07 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/09 14:19:35 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/10 18:00:24 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	dup = ft_strdup(s);
-	if (dup != NULL)
+	if (dup == NULL)
+		return (NULL);
+	i = 0;
+	while (dup[i])
 	{
-		i = 0;
-		while (dup[i])
-		{
-			dup[i] = f(i, dup[i]);
-			i++;
-		}
+		dup[i] = f(i, dup[i]);
+		i++;
 	}
 	return (dup);
 }
