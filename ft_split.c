@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:53:35 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/09 11:13:19 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/10 21:26:42 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,25 @@
 
 static char	*ft_strword(const char **s, char sep)
 {
-	char	*word;
-	size_t	i;
+	char		*word;
+	const char	*start;
+	size_t		len;
 
 	if (*s == NULL)
 		return (NULL);
 	word = NULL;
-	i = 0;
-	while (**s && **s == sep)
-		(*s)++;
-	while (s[0][i] && s[0][i] != sep)
-		i++;
-	if (i != 0)
-		word = ft_substr(*s, 0, i);
-	if (s[0][i] == '\0')
+	start = *s;
+	len = 0;
+	while (*start && *start == sep)
+		start++;
+	while (start[len] && start[len] != sep)
+		len++;
+	if (len != 0)
+		word = ft_substr(start, 0, len);
+	if (start[len] == '\0')
 		*s = NULL;
 	else
-		*s += i + 1;
+		*s = start + len + 1;
 	return (word);
 }
 
