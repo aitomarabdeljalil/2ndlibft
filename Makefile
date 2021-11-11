@@ -65,5 +65,5 @@ re: fclean all
 $(NAME): $(OBJS)
 	ar cr $(NAME) $(OBJS)
 
-bonus: $(BONUS_OBJS)
-	ar cr $(NAME) $(BONUS_OBJS)
+bonus: $(OBJ) $(BONUS_OBJS)
+	ar cr $(NAME) $(OBJ) $(BONUS_OBJS)
