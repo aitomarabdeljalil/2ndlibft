@@ -47,7 +47,7 @@ ft_lstmap.c
 OBJS := $(patsubst %.c, %.o, $(SRCS))
 BONUS_OBJS := $(patsubst %.c, %.o, $(BONUS_SRCS))
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
