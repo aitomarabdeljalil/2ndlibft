@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 15:19:40 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/06 16:55:08 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:19:23 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 
+	if (s == NULL)
+		return (NULL);
 	start = ft_strnlen(s, start);
 	len = ft_strnlen(s + start, len);
 	sub = malloc(len + 1);

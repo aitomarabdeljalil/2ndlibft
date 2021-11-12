@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 17:47:21 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/12 15:18:27 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:20:45 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	i = ft_strlen(s1);

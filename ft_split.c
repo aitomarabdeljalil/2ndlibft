@@ -6,7 +6,7 @@
 /*   By: syakoubi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 14:53:35 by syakoubi          #+#    #+#             */
-/*   Updated: 2021/11/10 21:26:42 by syakoubi         ###   ########.fr       */
+/*   Updated: 2021/11/12 20:22:08 by syakoubi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ char	**ft_split(char const *s, char c)
 	size_t	word_count;
 	char	**words;
 
+	if (s == NULL)
+		return (NULL);
 	word_count = ft_strwc(s, c);
 	words = malloc(sizeof(char *) * (word_count + 1));
 	if (words == NULL)
